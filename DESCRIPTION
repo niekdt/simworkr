@@ -1,0 +1,37 @@
+Package: simworkr
+Type: Package
+Title: Distributed simulation framework
+Version: 0.1.11
+Date: 2022-11-10
+Authors@R: 
+    person(given = "Niek",
+             family = "Den Teuling",
+             role = c("aut", "cre"),
+             email = "niekdenteuling@gmail.com",
+             comment = c(ORCID = "https://orcid.org/0000-0003-1026-5080"))
+Maintainer: Niek Den Teuling <niekdenteuling@gmail.com>
+URL: https://github.com/niekdt/simworkr
+BugReports: https://github.com/niekdt/simworkr/issues
+Description: Distributed simulation framework using a central Redis database to which worker processes connect to obtain new jobs to compute.
+License: FILE
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.4.0)
+Imports:
+    rredis (>= 1.7.0),
+    data.table (>= 1.10.4),
+    assertthat (>= 0.2.0),
+    magrittr (>= 1.5),
+    R.utils (>= 2.6.0),
+    methods,
+    foreach,
+    uuid,
+    memoise
+Suggests: 
+    devtools,
+    testthat (>= 3.0.0),
+    roxygen2 (>= 7.1.0),
+    doRedis,
+    rcmdcheck
+RoxygenNote: 7.2.1
